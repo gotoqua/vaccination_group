@@ -1,0 +1,19 @@
+{
+  "name": "vaccination_group",
+  "version": "1.0.0",
+  "description": "Algoritmo para ajudar a organizar grupos e suas prioridades para vacinação",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gotoqua/vaccination_group.git"
+  },
+  "author": "Gotoqua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gotoqua/vaccination_group/issues"
+  },
+  "homepage": "https://github.com/gotoqua/vaccination_group#readme"
+}
