@@ -1,3 +1,5 @@
-const PessoasVacinacao = require('./PessoasVacinacao.json');
+const fs = require('fs');
 
-console.log(PessoasVacinacao.pessoas);
+fs.readFile('./PessoasVacinacao.json', 'utf-8', (err, peopleString) => {
+    console.log(peopleString);
+});
