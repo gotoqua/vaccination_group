@@ -25,6 +25,7 @@ Para instalá-lo em sua máquina faça os comandos a seguir:
 
 ## Autor
 Caique Henrique Carvalho Santos Silva
+
 Email: <caiquech7@gmail.com>
 
 ## Licença
