@@ -18,7 +18,7 @@ Para instalá-lo em sua máquina faça os comandos a seguir:
   git clone git@github.com:gotoqua/vaccination_group.git
   cd projetos/vaccination_group
   npm install
-  node index.js
+  npm start
 ```
 
 ## Autor
