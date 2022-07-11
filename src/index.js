@@ -1,56 +1,57 @@
-const fs = require('fs');
+const file = require('./utils/file')
+file.read('./data/PessoasVacinacao.json').then(data => console.log(data));
 
-fs.readFile('./PessoasVacinacao.json', 'utf-8', (err, peopleString) => {
-    if (err) {
-        console.log(err);
-    } else {
-      try {
-        const data = JSON.parse(peopleString);
+// fs.readFile('./services/PessoasVacinacao.json', 'utf-8', (err, peopleString) => {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         try {
+//             const data = JSON.parse(peopleString);
 
-        // Filtro do Grupo 1 - Maiores de 60 anos
-        console.log("Grupo 1 - Pessoas com idade à partir dos 60 anos")
+//             // Filtro do Grupo 1 - Maiores de 60 anos
+//             console.log("Grupo 1 - Pessoas com idade à partir dos 60 anos")
 
-        const grupo1 = data.pessoas
-        .filter(pessoa=> pessoa.idade>=60);
-        
-        console.log(grupo1);
+//             const grupo1 = data.pessoas
+//                 .filter(pessoa => pessoa.idade >= 60);
 
-        // Filtro do Grupo 2 - Profissionais das áreas de: Saúde, Educação, Alimentícios e Segurança.
-        console.log("Grupo 2 - Profissionais das áreas de: Saúde, Educação, Alimentícios e Segurança")
+//             console.log(grupo1);
 
-        let grupo2 = data.pessoas
-        .filter(pessoa => pessoa.idade < 60)
-        .filter(pessoa => pessoa.areaDeAtuacao==='Saúde' ||
-            pessoa.areaDeAtuacao === 'Segurança' ||
-            pessoa.areaDeAtuacao === 'Educação' ||
-            pessoa.areaDeAtuacao === 'Alimentícios')
+//             // Filtro do Grupo 2 - Profissionais das áreas de: Saúde, Educação, Alimentícios e Segurança.
+//             console.log("Grupo 2 - Profissionais das áreas de: Saúde, Educação, Alimentícios e Segurança")
 
-        console.log(grupo2);
+//             let grupo2 = data.pessoas
+//                 .filter(pessoa => pessoa.idade < 60)
+//                 .filter(pessoa => pessoa.areaDeAtuacao === 'Saúde' ||
+//                     pessoa.areaDeAtuacao === 'Segurança' ||
+//                     pessoa.areaDeAtuacao === 'Educação' ||
+//                     pessoa.areaDeAtuacao === 'Alimentícios')
 
-        // Filtro do Grupo 3 - Pessoas de 30 à 59 anos
-        console.log("Grupo 3 - Pessoas de 30 à 59 anos")
+//             console.log(grupo2);
 
-        const areasParaRemover = ['Saúde', 'Segurança', 'Educação', 'Alimentícios']
+//             // Filtro do Grupo 3 - Pessoas de 30 à 59 anos
+//             console.log("Grupo 3 - Pessoas de 30 à 59 anos")
 
-        let grupo3 = data.pessoas
-            .filter(pessoa => pessoa.idade >= 30 && pessoa.idade < 60)
-            .filter(pessoa => !areasParaRemover.includes(pessoa.areaDeAtuacao))
+//             const areasParaRemover = ['Saúde', 'Segurança', 'Educação', 'Alimentícios']
 
-        console.log(grupo3);
+//             let grupo3 = data.pessoas
+//                 .filter(pessoa => pessoa.idade >= 30 && pessoa.idade < 60)
+//                 .filter(pessoa => !areasParaRemover.includes(pessoa.areaDeAtuacao))
 
-        // Filtro do Grupo 4 - Pessoas com idade até 30 anos
-        console.log("Grupo 4 - Pessoas com idade até 30 anos")
+//             console.log(grupo3);
 
-        let grupo4 = data.pessoas
-            .filter(pessoa => pessoa.idade <= 30)
-            .filter(pessoa => !areasParaRemover.includes(pessoa.areaDeAtuacao))
+//             // Filtro do Grupo 4 - Pessoas com idade até 30 anos
+//             console.log("Grupo 4 - Pessoas com idade até 30 anos")
 
-        console.log(grupo4);
+//             let grupo4 = data.pessoas
+//                 .filter(pessoa => pessoa.idade <= 30)
+//                 .filter(pessoa => !areasParaRemover.includes(pessoa.areaDeAtuacao))
 
-      } catch (err) {
-          console.log('Error parsing JSON', err);
-      }
-    }
-}); 
+//             console.log(grupo4);
+
+//         } catch (err) {
+//             console.log('Error parsing JSON', err);
+//         }
+//     }
+// });
 
 
