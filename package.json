@@ -1,6 +1,6 @@
 {
   "name": "vaccination_group",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Algoritmo para ajudar a organizar grupos e suas prioridades para vacinação",
   "main": "index.js",
   "scripts": {
